@@ -16,6 +16,28 @@ html{
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: center;
+    position:relative;
+    z-index: 0;
+    border-radius: 5%;
+    overflow: hidden;
+    animation-name: border;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border: 5px solid;
+}
+@keyframes border{
+    0% {
+        border-color: #3eb0e9;
+    }
+
+    50% {
+        border-color: #153595;
+    }
+
+    100% {
+        border-color: #3eb0e9;
+    }
 }
 .main{
     color: #1573a2;
@@ -27,11 +49,17 @@ html{
     word-wrap: break-word;
     text-wrap: pretty;
 }
-.main div{
+.main>div{
     background-color:rgba(1, 13, 24, 0.8);
     width: 50%;
     margin: 0 2% 0 2%;
     text-align: center;
+    border-radius: 5%;
+    animation-name: border;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border: 2px solid;
 }
 .main li, .main ul{
     list-style-type: none;
@@ -46,4 +74,28 @@ html{
 a{
     text-decoration: none;
     color:unset;
+}
+.linki{
+    justify-content: center;
+    position:relative;
+    display: flex;
+}
+.linki>a{
+    width: 20%;
+    height: 20%;
+    margin: 0 5% 0 5%;
+}
+.linki img{
+    width: 100%;
+    height: 100%;
+    
+}
+.linki img:hover{
+    border-radius: 5%;
+    animation-name: border;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border: 2px solid;
+    background-color: rgba(255, 255, 255, 0.1);
 }
